@@ -20,7 +20,7 @@ export default function Home() {
     if (esRef.current) esRef.current.close();
     setStream("");
 
-    const url = `/agui/run?q=${encodeURIComponent(text)}`;
+    const url = `http://localhost:8000/agui/run?q=${encodeURIComponent(text)}`;
     const es = new EventSource(url, { withCredentials: false });
     esRef.current = es;
 
